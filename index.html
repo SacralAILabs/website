@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sacral AI Labs - The Seat of Intelligent Creation. Creating intelligent applications powered by AI, bridging ancient wisdom with modern technology.">
+    <title>Sacral AI Labs | The Seat of Intelligent Creation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #7C3AED;
+            --secondary-color: #A78BFA;
+            --accent-color: #FF6B35;
+            --accent-light: #FFB84D;
+            --text-primary: #1A202C;
+            --text-secondary: #4A5568;
+            --background: #FFFFFF;
+            --background-alt: #FFF7ED;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background: var(--background);
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(to top, #FF6B35 0%, #7C3AED 100%);
+            color: white;
+            padding: 1rem 2rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 2rem;
+            font-weight: 500;
+            transition: opacity 0.3s;
+        }
+
+        nav a:hover {
+            opacity: 0.8;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(to top, #FF6B35 0%, #7C3AED 100%);
+            color: white;
+            padding: 12rem 2rem 8rem;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: 700;
+            letter-spacing: -2px;
+            margin-bottom: 1rem;
+            line-height: 1.1;
+        }
+
+        .hero .tagline {
+            font-size: 1.75rem;
+            font-weight: 300;
+            opacity: 0.95;
+            margin-bottom: 2rem;
+            letter-spacing: 0.5px;
+        }
+
+        .hero .subtitle {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        /* Section Styles */
+        section {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        section.alt {
+            background: var(--background-alt);
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            color: #FF6B35;
+            letter-spacing: -1px;
+        }
+
+        .section-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        p {
+            font-size: 1.15rem;
+            line-height: 1.8;
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+        }
+
+        /* Product Section */
+        .product-highlight {
+            background: linear-gradient(135deg, #FFF7ED 0%, #FFEDD5 100%);
+            padding: 3rem;
+            border-radius: 12px;
+            margin: 2rem 0;
+            border: 2px solid #FFB84D;
+        }
+
+        .product-highlight h3 {
+            color: #FF6B35;
+            font-size: 1.75rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .product-highlight p {
+            color: var(--text-primary);
+        }
+
+        /* Founder Section */
+        .founder-section {
+            text-align: center;
+        }
+
+        .founder-section h3 {
+            font-size: 1.5rem;
+            color: #7C3AED;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            text-align: center;
+            background: var(--background-alt);
+        }
+
+        .contact-button {
+            display: inline-block;
+            background: linear-gradient(to top, #FF6B35 0%, #7C3AED 100%);
+            color: white;
+            padding: 1rem 3rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.15rem;
+            margin-top: 2rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4);
+        }
+
+        .contact-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 107, 53, 0.5);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--text-primary);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        footer p {
+            color: rgba(255,255,255,0.8);
+            font-size: 0.95rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero .tagline {
+                font-size: 1.25rem;
+            }
+
+            .hero .subtitle {
+                font-size: 1rem;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            section {
+                padding: 3rem 1.5rem;
+            }
+
+            nav {
+                display: none;
+            }
+        }
+
+        /* Smooth scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-content {
+            animation: fadeInUp 0.8s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <div class="logo">SACRAL AI LABS</div>
+            <nav>
+                <a href="#about">About</a>
+                <a href="#product">Tattva AI</a>
+                <a href="#founder">Founder</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>SACRAL AI LABS</h1>
+            <p class="tagline">The Seat of Intelligent Creation.</p>
+            <p class="subtitle">Creating intelligent applications powered by AI, bridging ancient wisdom with modern technology.</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="section-content">
+            <h2>About Us</h2>
+            <p>Sacral AI Labs is where innovation meets intention. We create intelligent applications powered by artificial intelligence that bridge the gap between ancient wisdom and modern technology.</p>
+            <p>Our mission is to develop AI solutions that serve humanity's wellbeing by making traditional knowledge systems accessible, practical, and personalized for the modern world.</p>
+        </div>
+    </section>
+
+    <!-- Product Section -->
+    <section id="product" class="alt">
+        <div class="section-content">
+            <h2>Our Work</h2>
+            <div class="product-highlight">
+                <h3>Tattva AI</h3>
+                <p>Tattva AI is our flagship product - an AI-powered platform that makes personalized Ayurvedic wellness accessible through machine learning. By combining ancient Ayurvedic principles with cutting-edge AI technology, Tattva AI helps individuals discover holistic healing tailored to their unique constitution and needs.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Founder Section -->
+    <section id="founder" class="founder-section">
+        <div class="section-content">
+            <h2>About the Founder</h2>
+            <h3>Hamsini Achyutha Kumar</h3>
+            <p>Founded by Hamsini Achyutha Kumar, a software engineer and AI researcher dedicated to bridging ancient wisdom with modern technology. With a deep commitment to making transformative knowledge accessible to all, Hamsini brings together technical expertise and a passion for holistic wellbeing.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="section-content">
+            <h2>Get in Touch</h2>
+            <p>Interested in learning more about Sacral AI Labs or Tattva AI? We'd love to hear from you.</p>
+            <a href="mailto:hamsini@sacralailabs.com" class="contact-button">Contact Us</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Sacral AI Labs, LLC. All rights reserved.</p>
+        <p>The Seat of Intelligent Creation.</p>
+    </footer>
+</body>
+</html>
