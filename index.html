@@ -59,7 +59,7 @@
         }
 
         .logo {
-            font-size: 1.3rem;
+            font-size: clamp(0.9rem, 2.5vw, 1.3rem);
             font-weight: 400;
             letter-spacing: 2px;
             font-family: 'Audiowide', cursive;
@@ -252,7 +252,14 @@
                 display: none;
             }
         }
-
+        
+        /* Desktop spacing - negative margin */
+        @media (min-width: 768px) {
+            .hero {
+                margin-top: -3.5rem;
+            }
+        }
+        
         /* Smooth scroll */
         html {
             scroll-behavior: smooth;
@@ -301,7 +308,7 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <img src="logo2.png" alt="Sacral AI Labs Logo" style="width: 600px; max-width: 100%; margin-top: -4rem; margin-bottom: -4rem;">
+            <img src="logo2.png" alt="Sacral AI Labs Logo" style="width: 600px; max-width: 100%; margin-bottom: -4rem;">
             <h1>SACRAL AI LABS</h1>
             <p class="tagline">The Seat of Intelligent Creation.</p>
         </div>
